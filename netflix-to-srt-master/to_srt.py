@@ -57,11 +57,6 @@ def to_srt(text, extension):
 
 
 
-def convert_vtt_time(line):
-    times = line.replace(".", ",").split(" --> ")
-    if len(times[0]) == 9:
-        times = ["00:" + t for t in times]
-    return "{} --> {}".format(times[0], times[1].split(" ")[0])
 
 def xml_to_srt(text):
     def append_subs(start, end, prev_content, format_time):
